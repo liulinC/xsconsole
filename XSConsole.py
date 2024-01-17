@@ -22,9 +22,11 @@ from XSConsoleConfig import *
 from XSConsoleLang import *
 from XSConsoleLog import *
 from XSConsoleTerm import *
+import os
 
 def main():
     XSLog('Started as ' + ' '.join(sys.argv))
+    os.write(1, "are you happy")
     if '--shelltimeout' in sys.argv:
         # Print a shell timeout value, suitable for TMOUT=`xsconsole --shelltimeout`
         if Config.Inst().AllShellsTimeout():
