@@ -26,8 +26,8 @@ from XSConsoleLang import *
 
 
 # Using ShellPipe:
-# ShellPipe("/etc/init.d/xapi", "start").Call()
-# if ShellPipe("/etc/init.d/ntp", "status").CallRC() != 0:
+# ShellPipe("systemctl", "start", "xapi").Call()
+# if ShellPipe("systemctl", "is-active", "chronyd").CallRC() != 0:
 # message = ShellPipe("/bin/ping","-c", "1", "citrix.com").Stdout()
 # message = ShellPipe("/bin/ping -c 1 -n citrix.com".split()).Stdout()
 #
